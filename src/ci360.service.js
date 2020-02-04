@@ -52,7 +52,7 @@ class CI360Viewer {
 
     if (this.autoplay || this.loopTimeoutId) {
       this.stop();
-      this.autoplay = false;
+      //this.autoplay = false;
     }
 
     this.movementStart = event.pageX;
@@ -69,6 +69,10 @@ class CI360Viewer {
 
     if (this.bottomCircle) {
       this.show360ViewCircleIcon();
+    }
+
+    if (this.autoplay) {
+      this.play();
     }
   }
 
